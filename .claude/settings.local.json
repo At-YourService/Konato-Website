@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --check C:/Projects/GitHub/Konato-Website/scripts/export.js)",
+      "Read(//c/c/Projects/GitHub/Konato-Website/wp-content/themes/Konato/**)",
+      "Bash(node --check \"/c/Projects/GitHub/Konato-Website/scripts/crawl.js\")",
+      "Read(//c/c/Projects/GitHub/Konato-Website/about-us/**)",
+      "Bash(curl -sL \"https://code.jquery.com/jquery-3.7.1.min.js\" -o \"/c/Projects/GitHub/Konato-Website/wp-content/themes/Konato/js/jquery.min.js\")",
+      "Bash(node --check \"/c/Projects/GitHub/Konato-Website/scripts/inject-cookie-banner.js\")",
+      "Bash(node scripts/inject-cookie-banner.js)"
+    ]
+  }
+}

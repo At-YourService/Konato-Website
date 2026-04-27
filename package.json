@@ -1,0 +1,18 @@
+{
+  "name": "konato-website",
+  "version": "1.0.0",
+  "description": "Static export scripts for konato.be",
+  "scripts": {
+    "crawl": "node scripts/crawl.js",
+    "crawl:dry": "node scripts/crawl.js --dry-run",
+    "export": "node scripts/export.js",
+    "export:dry": "node scripts/export.js --dry-run",
+    "inject-cookie-banner": "node scripts/inject-cookie-banner.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "fs-extra": "^11.2.0",
+    "node-fetch": "^2.7.0",
+    "p-limit": "^3.1.0"
+  }
+}
