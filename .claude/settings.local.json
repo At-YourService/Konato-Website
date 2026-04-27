@@ -13,7 +13,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://www.konato.be/wp-content/uploads/2019/02/job4.png\")",
       "Bash(curl -s -L https://www.konato.be/wp-content/uploads/2019/02/__TRACKED_VAR__ -o wp-content/uploads/2019/02/__TRACKED_VAR__)",
       "Bash(curl -s \"https://www.konato.be/\")",
-      "Bash(curl -s -o /c/Projects/GitHub/Konato-Website/wp-content/uploads/2019/02/blueoverlaynocutout-header.png https://www.konato.be/wp-content/uploads/2019/02/blueoverlaynocutout-header.png)"
+      "Bash(curl -s -o /c/Projects/GitHub/Konato-Website/wp-content/uploads/2019/02/blueoverlaynocutout-header.png https://www.konato.be/wp-content/uploads/2019/02/blueoverlaynocutout-header.png)",
+      "Bash(python scripts/migrate_news.py)"
     ]
   }
 }

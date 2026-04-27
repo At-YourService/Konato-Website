@@ -6,7 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/23-3-2021-ehb-gastcollege/</loc>
+    <loc>https://www.konato.be/news/23-3-2021-ehb-gastcollege/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -31,42 +31,42 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/crisp-dm/</loc>
+    <loc>https://www.konato.be/news/crisp-dm/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/de-warmste-week-van-konato/</loc>
+    <loc>https://www.konato.be/news/de-warmste-week-van-konato/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/devops-een-paar-belangrijke-lessen/</loc>
+    <loc>https://www.konato.be/news/devops-een-paar-belangrijke-lessen/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/digital-transformation-is-bimodel-it-the-answer/</loc>
+    <loc>https://www.konato.be/news/digital-transformation-is-bimodel-it-the-answer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/dna-van-het-ideale-project/</loc>
+    <loc>https://www.konato.be/news/dna-van-het-ideale-project/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/domain-driven-design/</loc>
+    <loc>https://www.konato.be/news/domain-driven-design/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/end-of-summer-reflections/</loc>
+    <loc>https://www.konato.be/news/end-of-summer-reflections/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/erasmushogeschool-bxl/</loc>
+    <loc>https://www.konato.be/news/erasmushogeschool-bxl/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -76,7 +76,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/flexibiliteit-als-sleutel-tot-succes/</loc>
+    <loc>https://www.konato.be/news/flexibiliteit-als-sleutel-tot-succes/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -91,7 +91,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/intelligent-automation-and-process-management/</loc>
+    <loc>https://www.konato.be/news/intelligent-automation-and-process-management/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -106,17 +106,17 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/konato-knowledge-sharing/</loc>
+    <loc>https://www.konato.be/news/konato-knowledge-sharing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/konato-team-weekend-2021/</loc>
+    <loc>https://www.konato.be/news/konato-team-weekend-2021/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/konato-vip-summer-event/</loc>
+    <loc>https://www.konato.be/news/konato-vip-summer-event/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,12 +126,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/lipdub-team-weekend-konato/</loc>
+    <loc>https://www.konato.be/news/lipdub-team-weekend-konato/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/mei-2022-bowling-team-event/</loc>
+    <loc>https://www.konato.be/news/mei-2022-bowling-team-event/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -156,12 +156,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/processanalyse/</loc>
+    <loc>https://www.konato.be/news/processanalyse/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/safe-training/</loc>
+    <loc>https://www.konato.be/news/safe-training/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -171,17 +171,17 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/summer-event-padel-and-barbecue/</loc>
+    <loc>https://www.konato.be/news/summer-event-padel-and-barbecue/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/technovate-2024-ai-beyond-the-buzz/</loc>
+    <loc>https://www.konato.be/news/technovate-2024-ai-beyond-the-buzz/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/testimonial-bart-govaerts/</loc>
+    <loc>https://www.konato.be/news/testimonial-bart-govaerts/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -191,7 +191,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.konato.be/the-great-gatsby-team-weekend/</loc>
+    <loc>https://www.konato.be/news/the-great-gatsby-team-weekend/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
