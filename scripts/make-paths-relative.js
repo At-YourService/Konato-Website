@@ -37,6 +37,9 @@ function toRelative(url, depth) {
     url.startsWith("data:")
   ) return url;
 
+  // Strip legacy GitHub Pages subpath prefix
+  if (url.startsWith("/Konato-Website/")) url = url.slice("/Konato-Website".length);
+
   if (!url.startsWith("/")) return url; // already relative
 
   const prefix = "../".repeat(depth);

@@ -334,12 +334,24 @@ async function discoverUrls() {
     }
   } catch (_) {}
 
-  // Job / freelance-job sub-pages (apply forms, etc.) already tracked in git
-  const tracked = (await fs.readdir(OUT_DIR, { withFileTypes: true }))
-    .filter((d) => d.isDirectory() && !d.name.startsWith(".") && !d.name.startsWith("scripts") && d.name !== "node_modules")
-    .map((d) => `/${d.name}/`);
+  // Walk every existing index.html on disk so sub-pages like
+  // job/team-lead-analysis/ and freelance-job/analyst/apply/ are included
+  const walkDir = async (dir) => {
+    let entries;
+    try { entries = await fs.readdir(dir, { withFileTypes: true }); } catch (_) { return; }
+    for (const e of entries) {
+      if (e.name.startsWith(".") || e.name === "node_modules" || e.name === "scripts") continue;
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) await walkDir(full);
+      else if (e.name === "index.html") {
+        const rel = "/" + path.relative(OUT_DIR, path.dirname(full)).replace(/\\/g, "/") + "/";
+        urls.add(rel === "//" ? "/" : rel);
+      }
+    }
+  };
+  await walkDir(OUT_DIR);
 
-  for (const t of tracked) urls.add(t);
+  for (const t of urls) urls.add(t);
 
   return [...urls].sort();
 }

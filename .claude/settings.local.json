@@ -7,7 +7,13 @@
       "Read(//c/c/Projects/GitHub/Konato-Website/about-us/**)",
       "Bash(curl -sL \"https://code.jquery.com/jquery-3.7.1.min.js\" -o \"/c/Projects/GitHub/Konato-Website/wp-content/themes/Konato/js/jquery.min.js\")",
       "Bash(node --check \"/c/Projects/GitHub/Konato-Website/scripts/inject-cookie-banner.js\")",
-      "Bash(node scripts/inject-cookie-banner.js)"
+      "Bash(node scripts/inject-cookie-banner.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://www.konato.be/job/team-lead-analysis/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://www.konato.be/job/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://www.konato.be/wp-content/uploads/2019/02/job4.png\")",
+      "Bash(curl -s -L https://www.konato.be/wp-content/uploads/2019/02/__TRACKED_VAR__ -o wp-content/uploads/2019/02/__TRACKED_VAR__)",
+      "Bash(curl -s \"https://www.konato.be/\")",
+      "Bash(curl -s -o /c/Projects/GitHub/Konato-Website/wp-content/uploads/2019/02/blueoverlaynocutout-header.png https://www.konato.be/wp-content/uploads/2019/02/blueoverlaynocutout-header.png)"
     ]
   }
 }
