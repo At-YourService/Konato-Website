@@ -7,7 +7,8 @@
     "crawl:dry": "node scripts/crawl.js --dry-run",
     "export": "node scripts/export.js",
     "export:dry": "node scripts/export.js --dry-run",
-    "inject-cookie-banner": "node scripts/inject-cookie-banner.js"
+    "inject-cookie-banner": "node scripts/inject-cookie-banner.js",
+    "make-paths-relative": "node scripts/make-paths-relative.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
