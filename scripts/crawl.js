@@ -43,6 +43,7 @@ const REMOVE_SCRIPT_PATTERNS = [
   /webtoffee/,
   /wpcf7-redirect/,
   /wp-content\/plugins\/.*\/js/,  // all plugin JS
+  /wp-content\/plugins\/.*\/modules\/recaptcha/,
 ];
 
 // CSS whose href matches these patterns are removed (GDPR / plugin-only UI)
