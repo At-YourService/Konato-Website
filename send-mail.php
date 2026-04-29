@@ -9,7 +9,7 @@
  */
 
 // ── Configuration ────────────────────────────────────────────────────────────
-define('RECIPIENT',    'info@konato.be');
+define('RECIPIENT',    'info@9yards.be');
 define('SITE_NAME',    'Konato');
 define('RATE_LIMIT',   10);          // max submissions per IP per hour
 define('RATE_DIR',     sys_get_temp_dir() . '/konato_rl/');
