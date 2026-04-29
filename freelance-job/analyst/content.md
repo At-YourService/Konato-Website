@@ -1,5 +1,6 @@
 ---
 title: "Analyst"
+location: "Kontich"
 apply_path: "apply/index.html"
 ---
 

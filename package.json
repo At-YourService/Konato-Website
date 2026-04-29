@@ -8,7 +8,8 @@
     "export": "node scripts/export.js",
     "export:dry": "node scripts/export.js --dry-run",
     "inject-cookie-banner": "node scripts/inject-cookie-banner.js",
-    "make-paths-relative": "node scripts/make-paths-relative.js"
+    "make-paths-relative": "node scripts/make-paths-relative.js",
+    "build-jobs-index": "node scripts/build-jobs-index.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",

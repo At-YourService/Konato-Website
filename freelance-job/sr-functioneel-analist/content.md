@@ -1,5 +1,6 @@
 ---
 title: "Sr. functioneel analist –"
+location: "Brussel"
 apply_path: "apply/index.html"
 ---
 

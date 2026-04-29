@@ -224,62 +224,58 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.konato.be\/wp-admin\/admin-ajax.php","sec
     </header>
 <section class="service-content pad-bottom">
 	<div class="container no-pad-right no-pad-left">
-				<div class="row freelance-list">		
-				
-			<div class="col-sm-6 col-md-4 freelance-block">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="job-block-content">
-						<h3>Sr. functioneel analist –</h3>
-						<!-- <h2></h2> -->
-						<p>Brussel</p>
-						</div>
-						<div class="service-readmore">
-							<a href="../freelance-job/sr-functioneel-analist/">
-								<button class="info home-info">I'm intrested</button>
-							</a>
-						</div>
-					</div>
-					<!--
-						<div style="background-color: ; outline:solid 80px  " class="col-md-4 col-sm-6 service-blok-color arrow-right arrow-right-even square image">
-							<div class="crop">
-							<a href="../freelance-job/sr-functioneel-analist/">
-																</a>
-							</div>
-						</div>
-					-->
-				</div>
-			</div>
-		
-				
-			<div class="col-sm-6 col-md-4 freelance-block">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="job-block-content">
-						<h3>Analyst</h3>
-						<!-- <h2></h2> -->
-						<p>Kontich</p>
-						</div>
-						<div class="service-readmore">
-							<a href="../freelance-job/analyst/">
-								<button class="info home-info">I'm intrested</button>
-							</a>
-						</div>
-					</div>
-					<!--
-						<div style="background-color: ; outline:solid 80px  " class="col-md-4 col-sm-6 service-blok-color arrow-right arrow-right-even square image">
-							<div class="crop">
-							<a href="../freelance-job/analyst/">
-																</a>
-							</div>
-						</div>
-					-->
-				</div>
-			</div>
-		
-						</div>
+		<div id="freelance-list" class="row freelance-list">
+			<!-- job cards loaded dynamically from freelance-job/jobs-index.json -->
+		</div>
 	</div>
 </section>
+
+<script>
+(function () {
+  fetch('../freelance-job/jobs-index.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (jobs) {
+      var list = document.getElementById('freelance-list');
+      if (!list) return;
+
+      if (jobs.length === 0) {
+        list.innerHTML = '<p style="padding:24px">No open positions at the moment.</p>';
+        return;
+      }
+
+      list.innerHTML = jobs.map(function (j) {
+        return (
+          '<div class="col-sm-6 col-md-4 freelance-block">' +
+            '<div class="row">' +
+              '<div class="col-xs-12">' +
+                '<div class="job-block-content">' +
+                  '<h3>' + escHtml(j.title) + '</h3>' +
+                  (j.location ? '<p>' + escHtml(j.location) + '</p>' : '') +
+                '</div>' +
+                '<div class="service-readmore">' +
+                  '<a href="../freelance-job/' + encodeURIComponent(j.slug) + '/">' +
+                    '<button class="info home-info">I\'m interested</button>' +
+                  '</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+          '</div>'
+        );
+      }).join('');
+    })
+    .catch(function (err) {
+      console.error('Could not load job listings:', err);
+    });
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+})();
+</script>
 
 <footer>
     <div class="container">
