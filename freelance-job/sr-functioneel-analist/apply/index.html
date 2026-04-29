@@ -205,44 +205,89 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.konato.be\/wp-admin\/admin-ajax.php","sec
 <div class="container pad-top pad-bottom">
 <div class="row">
 <div class="col-md-8">
-<h2>Apply here for Sr. functioneel analist –</h2>
+<h2 id="apply-job-title">Apply here</h2>
 <p class="title-font">Yes, I want this job and I fill in the form below!</p>
-<div class="wp-block-contact-form-7-contact-form-selector">
-<div class="wpcf7 no-js" data-wpcf7-id="985" dir="ltr" id="wpcf7-f985-p987-o1" lang="nl-BE">
-<div class="screen-reader-response"><p aria-atomic="true" aria-live="polite" role="status"></p> <ul></ul></div>
-<form action="../../../apply/?jobid=1052511&amp;jobtitle=Sr.+functioneel+analist+%E2%80%93#wpcf7-f985-p987-o1" aria-label="Contact form" class="wpcf7-form init" data-status="init" enctype="multipart/form-data" method="post" novalidate="novalidate">
-<fieldset class="hidden-fields-container"><input name="_wpcf7" type="hidden" value="985"><input name="_wpcf7_version" type="hidden" value="6.1.2"><input name="_wpcf7_locale" type="hidden" value="nl_BE"><input name="_wpcf7_unit_tag" type="hidden" value="wpcf7-f985-p987-o1"><input name="_wpcf7_container_post" type="hidden" value="987"><input name="_wpcf7_posted_data_hash" type="hidden" value=""><input name="_wpcf7_recaptcha_response" type="hidden" value="">
-</fieldset>
-<p><span class="wpcf7-form-control-wrap" data-name="job-id"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required hidden" id="jobid" maxlength="400" name="job-id" size="40" type="text" value=""></span>
-</p>
-<p><span class="wpcf7-form-control-wrap" data-name="job-title"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required hidden" id="jobtitle" maxlength="400" name="job-title" size="40" type="text" value=""></span>
-</p>
-<p><label> First name <span class="required">*</span></label><span class="wpcf7-form-control-wrap" data-name="first-name"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" maxlength="400" name="first-name" size="40" type="text" value=""></span>
-</p>
-<p><label> Last name <span class="required">*</span></label><span class="wpcf7-form-control-wrap" data-name="last-name"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" maxlength="400" name="last-name" size="40" type="text" value=""></span>
-</p>
-<p><label> Email <span class="required">*</span></label><span class="wpcf7-form-control-wrap" data-name="your-email"><input aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" maxlength="400" name="your-email" size="40" type="email" value=""></span>
-</p>
-<p><label> Mobile phone number </label><span class="wpcf7-form-control-wrap" data-name="Phone"><input aria-invalid="false" class="wpcf7-form-control wpcf7-tel wpcf7-text wpcf7-validates-as-tel" maxlength="400" name="Phone" size="40" type="tel" value=""></span><br>
-<small>Don't worry, we'll only contact you the first time to get to know each other.</small>
-</p>
-<p><label> Your CV <span class="required">*</span></label><span class="wpcf7-form-control-wrap" data-name="cv"><input accept=".doc,.docx,.pdf,.jpg,.png" aria-invalid="false" aria-required="true" class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required" name="cv" size="40" type="file"></span>
-</p>
-<p><label> Anything else you would like to share with us?</label><span class="wpcf7-form-control-wrap" data-name="Whydoyoufitforthisjob"><textarea aria-invalid="false" class="wpcf7-form-control wpcf7-textarea" cols="40" maxlength="2000" name="Whydoyoufitforthisjob" rows="10"></textarea></span>
-</p>
-<p><label></label><span class="wpcf7-form-control-wrap" data-name="gdpr"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input aria-invalid="false" name="gdpr" type="checkbox" value="1"><span class="wpcf7-list-item-label">We process your personal data only for recruitment purposes.</span></label></span></span></span>
-</p>
-<p><input class="wpcf7-form-control wpcf7-submit has-spinner info" type="submit" value="Apply">
-</p><div aria-hidden="true" class="wpcf7-response-output"></div>
+
+<style>
+  #apply-form .form-group { margin-bottom: 14px; }
+  #apply-form label { display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; }
+  #apply-form .required { color: #00ADDA; }
+  #apply-form input[type="text"],
+  #apply-form input[type="email"],
+  #apply-form input[type="tel"],
+  #apply-form textarea {
+    width: 100%; padding: 9px 12px; border: 1px solid #ccc;
+    border-radius: 2px; font-size: 14px; font-family: inherit;
+    box-sizing: border-box; transition: border-color .2s;
+  }
+  #apply-form input[type="file"] { font-size: 14px; font-family: inherit; }
+  #apply-form input:focus, #apply-form textarea:focus { border-color: #00ADDA; outline: none; }
+  #apply-form textarea { resize: vertical; min-height: 120px; }
+  #apply-form .gdpr-row { display: flex; align-items: center; gap: 8px; margin: 10px 0 16px; font-size: 13px; }
+  #apply-form .gdpr-row input[type="checkbox"] { flex-shrink: 0; width: 16px; height: 16px; margin: 0; cursor: pointer; }
+  #apply-form .gdpr-row label { display: inline; font-weight: normal; font-size: 13px; margin-bottom: 0; line-height: 1.4; cursor: pointer; }
+  #apply-form .submit-btn {
+    background: #00ADDA; color: #fff; border: none; padding: 10px 28px;
+    font-size: 15px; font-family: inherit; border-radius: 2px;
+    cursor: pointer; transition: background .2s; min-width: 120px;
+  }
+  #apply-form .submit-btn:hover:not(:disabled) { background: #008aae; }
+  #apply-form .submit-btn:disabled { opacity: .65; cursor: not-allowed; }
+  #apply-status { margin-top: 14px; padding: 10px 14px; border-radius: 2px; font-size: 14px; display: none; }
+  #apply-status.success { background: #e6f9ee; color: #1a7a3c; border: 1px solid #a3d9b5; }
+  #apply-status.error   { background: #fdf0f0; color: #b71c1c; border: 1px solid #f5c0c0; }
+  .field-error { color: #b71c1c; font-size: 12px; margin-top: 3px; display: none; }
+</style>
+
+<form id="apply-form" novalidate>
+  <input id="apply-jobid"    name="job-id"    type="hidden" value="">
+  <input id="apply-jobtitle" name="job-title" type="hidden" value="">
+
+  <div class="form-group row">
+    <div class="col-sm-6">
+      <label for="apply-firstname">First name <span class="required">*</span></label>
+      <input id="apply-firstname" type="text" name="first-name" maxlength="100" required>
+      <div class="field-error" id="err-firstname">Please enter your first name.</div>
+    </div>
+    <div class="col-sm-6">
+      <label for="apply-lastname">Last name <span class="required">*</span></label>
+      <input id="apply-lastname" type="text" name="last-name" maxlength="100" required>
+      <div class="field-error" id="err-lastname">Please enter your last name.</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="apply-email">Email <span class="required">*</span></label>
+    <input id="apply-email" type="email" name="email" maxlength="400" required>
+    <div class="field-error" id="err-email">Please enter a valid email address.</div>
+  </div>
+  <div class="form-group">
+    <label for="apply-phone">Mobile phone number</label>
+    <input id="apply-phone" type="tel" name="phone" maxlength="50">
+    <small style="color:#888;font-size:12px">We'll only contact you the first time to get to know each other.</small>
+  </div>
+  <div class="form-group">
+    <label for="apply-cv">Your CV <span class="required">*</span></label>
+    <input id="apply-cv" type="file" name="cv" accept=".doc,.docx,.pdf,.jpg,.png" required>
+    <div class="field-error" id="err-cv">Please attach your CV (PDF, Word or image, max 5 MB).</div>
+  </div>
+  <div class="form-group">
+    <label for="apply-motivation">Anything else you would like to share with us?</label>
+    <textarea id="apply-motivation" name="motivation" maxlength="5000" rows="6"></textarea>
+  </div>
+  <div class="gdpr-row">
+    <input id="apply-gdpr" type="checkbox" name="gdpr" required>
+    <label for="apply-gdpr" style="font-weight:normal">
+      We process your personal data only for recruitment purposes. <span class="required">*</span>
+    </label>
+  </div>
+  <div class="field-error" id="err-gdpr" style="margin-top:-10px;margin-bottom:10px">Please confirm you agree to data processing.</div>
+  <!-- Honeypot: hidden from humans, bots fill it in and get silently rejected -->
+  <input name="website" type="text" style="display:none" tabindex="-1" autocomplete="off">
+  <button type="submit" class="submit-btn">Apply</button>
+  <div id="apply-status" role="alert"></div>
 </form>
-</div>
-</div>
-<script>
-const example = window.location.href;
 
-(new URL(example)).searchParams.forEach((x, y) => document.getElementById(y).value = x);
-
-</script>
+<script src="../../apply-form.js"></script>
 </div>
 <div class="col-md-4">
 <div class="row">
@@ -250,45 +295,8 @@ const example = window.location.href;
 <h3>Other vacancies</h3>
 </div>
 </div>
-<div class="row">
-<div class="col-sm-12">
-<a class="small-job-block" href="../../../freelance-job/2-talig-business-analyst/index.html">
-<h4>2-Talig Business Analyst</h4>
-<p>Schaarbeek</p>
-</a>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12">
-<a class="small-job-block" href="../../../freelance-job/freelance-test-automation-consultant/index.html">
-<h4>Freelance Test Automation Consultant</h4>
-<p>Schaarbeek</p>
-</a>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12">
-<a class="small-job-block" href="../../../freelance-job/business-development-manager-payrol/index.html">
-<h4>Business Development Manager (payrol)</h4>
-<p>Kontich</p>
-</a>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12">
-<a class="small-job-block" href="../../../freelance-job/sr-functioneel-analist/index.html">
-<h4>Sr. functioneel analist –</h4>
-<p>Brussel</p>
-</a>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12">
-<a class="small-job-block" href="../../../freelance-job/analyst/index.html">
-<h4>Analyst</h4>
-<p>Kontich</p>
-</a>
-</div>
+<div id="other-vacancies">
+<!-- populated dynamically by apply-sidebar.js -->
 </div>
 </div>
 </div>
@@ -489,4 +497,5 @@ var wpcf7_recaptcha = {
 };
 /* ]]> */
 </script>
+<script src="../../apply-sidebar.js"></script>
 </body></html>
