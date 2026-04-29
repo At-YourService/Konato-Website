@@ -234,22 +234,69 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.konato.be\/wp-admin\/admin-ajax.php","sec
 				</div>
 				<div class="col-md-6">
 					            			                		
-<div class="wpcf7 no-js" id="wpcf7-f251-p19-o1" lang="nl-BE" dir="ltr" data-wpcf7-id="251">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="../contact/#wpcf7-f251-p19-o1" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
-<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="251"><input type="hidden" name="_wpcf7_version" value="6.1.2"><input type="hidden" name="_wpcf7_locale" value="nl_BE"><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f251-p19-o1"><input type="hidden" name="_wpcf7_container_post" value="19"><input type="hidden" name="_wpcf7_posted_data_hash" value=""><input type="hidden" name="_wpcf7_recaptcha_response" value="">
-</fieldset>
-<p><label> Name <span class="required">*</span></label><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value="" type="text" name="your-name"></span>
-</p>
-<p><label> Email <span class="required">*</span></label><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" value="" type="email" name="your-email"></span>
-</p>
-<p><label> Message <span class="required">*</span></label><span class="wpcf7-form-control-wrap" data-name="textarea-90"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="textarea-90"></textarea></span><br>
-<label></label><span class="wpcf7-form-control-wrap" data-name="gdpr"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="gdpr" value="1" aria-invalid="false"><span class="wpcf7-list-item-label">I’ve read and accept the <a href="../privacy-policy/" target="_blank">privacy policy</a></span></label></span></span></span>
-</p>
-<p><input class="wpcf7-form-control wpcf7-submit has-spinner info" type="submit" value="Send a message">
-</p><div class="wpcf7-response-output" aria-hidden="true"></div>
+<style>
+  #contact-form .form-group { margin-bottom: 14px; }
+  #contact-form label { display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; }
+  #contact-form .required { color: #00ADDA; }
+  #contact-form input[type="text"],
+  #contact-form input[type="email"],
+  #contact-form textarea {
+    width: 100%; padding: 9px 12px; border: 1px solid #ccc;
+    border-radius: 2px; font-size: 14px; font-family: inherit;
+    box-sizing: border-box; transition: border-color .2s;
+  }
+  #contact-form input:focus, #contact-form textarea:focus {
+    border-color: #00ADDA; outline: none;
+  }
+  #contact-form textarea { resize: vertical; min-height: 140px; }
+  #contact-form .gdpr-row { display: flex; align-items: flex-start; gap: 8px; margin: 10px 0 16px; font-size: 13px; }
+  #contact-form .gdpr-row input { margin-top: 2px; flex-shrink: 0; }
+  #contact-form .submit-btn {
+    background: #00ADDA; color: #fff; border: none; padding: 10px 28px;
+    font-size: 15px; font-family: inherit; border-radius: 2px;
+    cursor: pointer; transition: background .2s; min-width: 160px;
+  }
+  #contact-form .submit-btn:hover:not(:disabled) { background: #008aae; }
+  #contact-form .submit-btn:disabled { opacity: .65; cursor: not-allowed; }
+  #form-status {
+    margin-top: 14px; padding: 10px 14px; border-radius: 2px;
+    font-size: 14px; display: none;
+  }
+  #form-status.success { background: #e6f9ee; color: #1a7a3c; border: 1px solid #a3d9b5; }
+  #form-status.error   { background: #fdf0f0; color: #b71c1c; border: 1px solid #f5c0c0; }
+  .field-error { color: #b71c1c; font-size: 12px; margin-top: 3px; display: none; }
+</style>
+
+<form id="contact-form" novalidate>
+  <div class="form-group">
+    <label for="cf-name">Name <span class="required">*</span></label>
+    <input id="cf-name" type="text" name="your-name" maxlength="400" required>
+    <div class="field-error" id="err-name">Please enter your name.</div>
+  </div>
+  <div class="form-group">
+    <label for="cf-email">Email <span class="required">*</span></label>
+    <input id="cf-email" type="email" name="your-email" maxlength="400" required>
+    <div class="field-error" id="err-email">Please enter a valid email address.</div>
+  </div>
+  <div class="form-group">
+    <label for="cf-message">Message <span class="required">*</span></label>
+    <textarea id="cf-message" name="message" maxlength="2000" required></textarea>
+    <div class="field-error" id="err-message">Please enter a message.</div>
+  </div>
+  <div class="gdpr-row">
+    <input id="cf-gdpr" type="checkbox" name="gdpr" required>
+    <label for="cf-gdpr" style="font-weight:normal">
+      I’ve read and accept the <a href="../privacy-policy/" target="_blank">privacy policy</a>. <span class="required">*</span>
+    </label>
+  </div>
+  <div class="field-error" id="err-gdpr" style="margin-top:-10px;margin-bottom:10px">Please accept the privacy policy.</div>
+  <!-- Honeypot: hidden from humans, bots fill it in and get silently rejected -->
+  <input id="cf-website" name="website" type="text" style="display:none" tabindex="-1" autocomplete="off">
+  <button type="submit" class="submit-btn">Send a message</button>
+  <div id="form-status" role="alert"></div>
 </form>
-</div>
+
+<script src="../wp-content/themes/Konato/js/contact-form.js"></script>
 
             		        							</div>
 			</div>
@@ -422,38 +469,11 @@ var _EPYT_ = {"ajaxurl":"https:\/\/www.konato.be\/wp-admin\/admin-ajax.php","sec
 
 
 
-<script type="text/javascript" id="contact-form-7-js-before">
-/* <![CDATA[ */
-var wpcf7 = {
-    "api": {
-        "root": "https:\/\/www.konato.be\/wp-json\/",
-        "namespace": "contact-form-7\/v1"
-    }
-};
-/* ]]> */
-</script>
-
-<script type="text/javascript" id="wpcf7-redirect-script-js-extra">
-/* <![CDATA[ */
-var wpcf7r = {"ajax_url":"https:\/\/www.konato.be\/wp-admin\/admin-ajax.php"};
-/* ]]> */
-</script>
 
 <script type="text/javascript" src="../wp-content/themes/Konato/js/jquery.min.js"></script>
 <script type="text/javascript" src="../wp-content/themes/Konato/js/bootstrap.min.js" id="bootstrapjs-js"></script>
 <script type="text/javascript" src="../wp-content/themes/Konato/js/konato_js.js" id="customjs-js"></script>
 
 
-<script type="text/javascript" id="wpcf7-recaptcha-js-before">
-/* <![CDATA[ */
-var wpcf7_recaptcha = {
-    "sitekey": "6LfAKr8pAAAAAP9wjVKLB-s8RHrFNsDQ7KvKfqca",
-    "actions": {
-        "homepage": "homepage",
-        "contactform": "contactform"
-    }
-};
-/* ]]> */
-</script>
 
 </body></html>
