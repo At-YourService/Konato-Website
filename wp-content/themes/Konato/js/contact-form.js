@@ -44,21 +44,25 @@ var MAIL_ENDPOINT = "https://www.konato.be/send-mail.php";
     btn.disabled    = true;
     btn.textContent = "Sending…";
 
-    var payload = {
-      name:    form.querySelector("#cf-name").value.trim(),
-      email:   form.querySelector("#cf-email").value.trim(),
-      message: form.querySelector("#cf-message").value.trim(),
-      website: form.querySelector("#cf-website") ? form.querySelector("#cf-website").value : "",
-    };
+    var params = new URLSearchParams();
+    params.append("name",    form.querySelector("#cf-name").value.trim());
+    params.append("email",   form.querySelector("#cf-email").value.trim());
+    params.append("message", form.querySelector("#cf-message").value.trim());
+    params.append("privacy", form.querySelector("#cf-gdpr").checked ? "1" : "");
+    params.append("website", form.querySelector("#cf-website") ? form.querySelector("#cf-website").value : "");
 
     fetch(MAIL_ENDPOINT, {
       method:  "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body:    JSON.stringify(payload),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+      },
+      body: params.toString(),
     })
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        if (data.status === "success") {
+        if (data.success) {
           status.className     = "success";
           status.textContent   = "Thank you! Your message has been sent. We'll get back to you shortly.";
           status.style.display = "block";
