@@ -77,7 +77,7 @@ var APPLY_ENDPOINT = "https://www.konato.be/send-application.php";
     })
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        if (data.status === "success") {
+        if (data.success || data.status === "success") {
           status.className   = "success";
           status.textContent = data.message;
           status.style.display = "block";
